@@ -80,7 +80,13 @@
             <a href="#pricing" class="btn btn-outline-secondary">Buy now</a>
           </div>
           <div class="col-md-5 text-muted d-none d-md-block">
-            <img class="img-fluid" src="ebook-cover.png" alt="eBook-cover" />
+            <span
+              class="tt"
+              data-bs-placement="bottom"
+              title="Net Ninja Book Cover"
+            >
+              <img class="img-fluid" src="ebook-cover.png" alt="eBook-cover" />
+            </span>
           </div>
         </div>
       </div>
@@ -452,6 +458,7 @@
                 <span class="input-group-text">
                   <i class="bi bi-envelope-fill"></i>
                 </span>
+
                 <input
                   type="email"
                   name=""
@@ -459,6 +466,16 @@
                   placeholder="e.g.Mario@example.com"
                   class="form-control"
                 />
+                <!-- tooltip -->
+                <span class="input-group-text">
+                  <span
+                    class="tt"
+                    data-bs-placement="right"
+                    title="Enter an email address so we can reply to."
+                  >
+                    <i class="bi bi-question-circle text-muted"></i>
+                  </span>
+                </span>
               </div>
               <label for="name" class="form-label">Name:</label>
               <div class="mb-2 input-group">
@@ -471,6 +488,14 @@
                   id="name"
                   placeholder="e.g.Mario"
                 />
+                <!-- tooltip -->
+                <span
+                  class="input-group-text tt"
+                  data-bs-placement="right"
+                  title="Pretty self explanatory really..."
+                >
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
               </div>
 
               <label for="subject" class="form-label"
@@ -505,5 +530,11 @@
       </div>
     </section>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      const tooltips = document.querySelectorAll(".tt");
+      tooltips.forEach((t) => {
+        new bootstrap.Tooltip(t);
+      });
+    </script>
   </body>
 </html>
