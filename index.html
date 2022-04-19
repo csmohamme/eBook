@@ -78,8 +78,18 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
             <a href="#pricing" class="btn btn-outline-secondary">Buy now</a>
+            <!-- open sidebar /offcanvas  -->
+            <a
+              href="#sidebar"
+              class="d-block mt-3"
+              data-bs-toggle="offcanvas"
+              role="button"
+              aria-controls="sidebar"
+              >Explore my other books</a
+            >
           </div>
           <div class="col-md-5 text-muted d-none d-md-block">
+            <!-- tooltip -->
             <span
               class="tt"
               data-bs-placement="bottom"
@@ -597,6 +607,32 @@
         </div>
       </div>
     </div>
+    <!-- offcanvas -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="sidebar"
+      aria-labelledby="sidebar-label"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="sidebar-label">My other books</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <p class="lead">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos velit
+          accusamus libero molestias, ipsum eum. Quibusdam officia id doloremque
+          vitae dolores in quia, dignissimos dolorum assumenda enim. Quas,
+          nostrum. Nisi?
+        </p>
+      </div>
+    </div>
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script>
       const tooltips = document.querySelectorAll(".tt");
